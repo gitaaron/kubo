@@ -290,7 +290,7 @@ func Online(bcfg *BuildCfg, cfg *config.Config) fx.Option {
 	}
 
 	/* don't provide from bitswap when the strategic provider service is active */
-	shouldBitswapProvide := !cfg.Experimental.StrategicProviding
+	shouldBitswapProvide := false
 
 	return fx.Options(
 		fx.Provide(OnlineExchange(cfg, shouldBitswapProvide)),

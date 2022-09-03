@@ -34,7 +34,7 @@ func OnlineExchange(cfg *config.Config, provide bool) interface{} {
 		}
 
 		opts := []bitswap.Option{
-			bitswap.ProvideEnabled(provide),
+			bitswap.ProvideEnabled(false),
 			bitswap.EngineBlockstoreWorkerCount(int(internalBsCfg.EngineBlockstoreWorkerCount.WithDefault(DefaultEngineBlockstoreWorkerCount))),
 			bitswap.TaskWorkerCount(int(internalBsCfg.TaskWorkerCount.WithDefault(DefaultTaskWorkerCount))),
 			bitswap.EngineTaskWorkerCount(int(internalBsCfg.EngineTaskWorkerCount.WithDefault(DefaultEngineTaskWorkerCount))),

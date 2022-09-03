@@ -262,3 +262,5 @@ require (
 )
 
 go 1.17
+replace github.com/libp2p/go-libp2p-kad-dht => ../go-libp2p-kad-dht
+replace github.com/ipfs/go-bitswap => ../go-bitswap
